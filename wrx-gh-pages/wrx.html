@@ -108,36 +108,68 @@
                 arr[i].style.transform="translate(0,"+clientH+"px)";
                 arr[i].addEventListener("webkitTransitionEnd",function(){
                     this.style.transition="none";
+                    this.style.Webkittransition="none";
+                    this.style.Moztransition="none";
+                    this.style.Webkittransform="translate(0,0)";
+                    this.style.Moztransform="translate(0,0)";
                     this.style.transform="translate(0,0)";
                     var that=this;
                     setTimeout(function(){
+                        that.style.Webkittransition="transform 3s ease "+(1+4*Math.random())+"s";
+                        that.style.Moztransition="transform 3s ease "+(1+4*Math.random())+"s";
                         that.style.transition="transform 3s ease "+(1+4*Math.random())+"s";
+                        that.style.Webkittransform="translate(0,"+clientH+"px)";
+                        that.style.Moztransform="translate(0,"+clientH+"px)";
                         that.style.transform="translate(0,"+clientH+"px)";
                     },0)
                 })
                 arr[i].addEventListener("mozTransitionEnd",function(){
+                    this.style.Webkittransition="none";
+                    this.style.Moztransform="translate(0,0)";
+                    this.style.Webkittransition="none";
+                    this.style.Moztransform="translate(0,0)";
                     this.style.transition="none";
                     this.style.transform="translate(0,0)";
                     var that=this;
                     setTimeout(function(){
+                        that.style.Webkittransition="transform 3s ease "+(1+4*Math.random())+"s";
+                        that.style.Moztransform="translate(0,"+clientH+"px)"
+                        that.style.Webkittransition="transform 3s ease "+(1+4*Math.random())+"s";
+                        that.style.Moztransform="translate(0,"+clientH+"px)"
                         that.style.transition="transform 3s ease "+(1+4*Math.random())+"s";
                         that.style.transform="translate(0,"+clientH+"px)";
                     },0)
                 })
                 arr[i].addEventListener("oTransitionEnd",function(){
+                    this.style.Webkittransition="none";
+                    this.style.Moztransform="translate(0,0)";
+                    this.style.Webkittransition="none";
+                    this.style.Moztransform="translate(0,0)";
                     this.style.transition="none";
                     this.style.transform="translate(0,0)";
                     var that=this;
                     setTimeout(function(){
+                        that.style.Webkittransition="transform 3s ease "+(1+1*Math.random())+"s";
+                        that.style.Moztransform="translate(0,"+clientH+"px)";
+                        that.style.Webkittransition="transform 3s ease "+(1+1*Math.random())+"s";
+                        that.style.Moztransform="translate(0,"+clientH+"px)";
                         that.style.transition="transform 3s ease "+(1+1*Math.random())+"s";
-                        that.style.transform="translate(0,"+clientH+"px)";
-                    },0)
+                    that.style.transform="translate(0,"+clientH+"px)";
+                },0)
                 })
                 arr[i].addEventListener("msTransitionEnd",function(){
+                    this.style.Webkittransition="none";
+                    this.style.Moztransform="translate(0,0)";
+                    this.style.Webkittransition="none";
+                    this.style.Moztransform="translate(0,0)";
                     this.style.transition="none";
                     this.style.transform="translate(0,0)";
                     var that=this;
                     setTimeout(function(){
+                        that.style.Webkittransition="transform 3s ease "+(1+4*Math.random())+"s";
+                        that.style.Moztransform="translate(0,"+clientH+"px)";
+                        that.style.Webkittransition="transform 3s ease "+(1+4*Math.random())+"s";
+                        that.style.Moztransform="translate(0,"+clientH+"px)";
                         that.style.transition="transform 3s ease "+(1+4*Math.random())+"s";
                         that.style.transform="translate(0,"+clientH+"px)";
                     },0)
@@ -154,6 +186,8 @@
             var div=document.createElement("div");
             div.style.cssText="width:100px;height:150px;position:absolute;left:0;bottom:0;right:0;top:0;margin:auto;background-size:cover;background-image:url("+i+".jpg)";
             div.style.transform="translate3d("+x+"px,"+y+"px,"+z+"px) rotateY("+angle+"rad)";
+            div.style.Webkittransform="translate3d("+x+"px,"+y+"px,"+z+"px) rotateY("+angle+"rad)";
+            div.style.Moztransform="translate3d("+x+"px,"+y+"px,"+z+"px) rotateY("+angle+"rad)";
             ball.appendChild(div);
         }
     }
