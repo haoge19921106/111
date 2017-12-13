@@ -34,7 +34,11 @@
         position: absolute;
         left: 0;top:0;
         width: 100%;height: 100%;
+        -webkit-transform-style: preserve-3d;
+        -moz-transform-style:preserve-3d;
         transform-style: preserve-3d;
+        -webkit-animation: first 10s linear infinite;
+        -moz-animation: first 10s linear infinite;
         animation: first 10s linear infinite;
     }
     /*.ball:hover{*/
@@ -42,22 +46,42 @@
     /*}*/
     @keyframes first {
         0%{
+            -webkit-transform: rotateY(0deg);
+            -webkit-transform-origin: center center;
+            -moz-transform: rotateY(0deg);
+            -moztransform-origin: center center;
             transform: rotateY(0deg);
             transform-origin: center center;
         }
         25%{
+            -webkit-transform: rotateY(90deg);
+            -webkit-transform-origin: center center;
+            -moz-transform: rotateY(90deg);
+            -moztransform-origin: center center;
             transform: rotateY(90deg);
             transform-origin: center center;
         }
         50%{
+            -webkit-transform: rotateY(180deg);
+            -webkit-transform-origin: center center;
+            -moz-transform: rotateY(180deg);
+            -moztransform-origin: center center;
             transform: rotateY(180deg);
             transform-origin: center center;
         }
         75%{
+            -webkit-transform: rotateY(270deg);
+            -webkit-transform-origin: center center;
+            -moz-transform: rotateY(270deg);
+            -moztransform-origin: center center;
             transform: rotateY(270deg);
             transform-origin: center center;
         }
         100%{
+            -webkit-transform: rotateY(360deg);
+            -webkit-transform-origin: center center;
+            -moz-transform: rotateY(360deg);
+            -moztransform-origin: center center;
             transform: rotateY(360deg);
             transform-origin: center center;
         }
